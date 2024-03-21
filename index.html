@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Forumlaire de contact</title>
+    <link href="CSS/style.css" rel="stylesheet" type="text/css">
+    
+</head>
+<body>
+
+    <ul action="PHP/traitement.php" method="post">
+        <img class="logo" src="IMG/maxresdefault.jpg" ;>
+
+    </ul>
+
+    <h1>Forumlaire de rgontct</h1>
+
+
+<form action="PHP/traitement.php" method="post" class="form-container">
+
+    <!--<button type="submit" class="btn-right">Ajouter...</button>-->
+    <!-- Temp - envoie dans la BDD -->
+    
+
+    <label>Noeirghopaegpoazghoaize :</label>
+    <input type="text" id="nom" name="nomInput" required onblur="focus">
+
+    <label>Prénom :</label>
+    <input type="text" id="prenom" name="prenom" required onblur="focus">
+
+    <br>
+
+    <label>Votre Email :</label>
+    <input type="email" id="email" name="email" required onblur="focus">
+    <span id="emailError"></span>
+
+    <br>
+
+    <label>N°de téléphone :</label>
+    <input type="tel" id="tel" name="tel" required>
+
+    <label>Formation Actuelle : </label>
+    <input type="text" id="Formactu" name="Formation_Actu" required onblur="">
+
+    <label>Formation + niveau souhaité :</label>
+    <select id="Formation" name="Formation">
+        <option value="" disabled selected>Choisissez une formation</option>
+        <option value="bts">BTS</option>
+        <option value="cap">CAP</option>
+        <option value="bachelor">Bachelor</option>
+    </select>
+
+    <br>
+    <br>
+    
+    <div>
+        <label>Voie souhaité :</label>
+        
+        <input type="radio" id="1" name="choixvoix" >
+        <label for="1">Apprentissage</label>
+    
+        <input type="radio" id="2" name="choixvoix" >
+        <label for="2">Initial</label>
+    
+        <input type="radio" id="3" name="choixvoix" >
+        <label for="3">Ne sait pas encore</label>
+    </div>
+    
+
+    <br>
+
+    <label>Observation :</label>
+    <!--<input type="text" id="observation" name="observation"> -->
+    <!-- test -->
+    <textarea type="text" name="observation" id="observation" cols="20" rows="5" placeholder="Entrez votre observation ici"></textarea>
+    
+    <button type="submit" class="">Envoyé les résultats</button>
+
+</form>
+<script src="JS/script.js"></script>
+</body>
+</html>
